@@ -1,0 +1,14 @@
+name: bb
+on:
+  push:
+  star:
+  workflow_dispatch:
+
+jobs:
+  BB-build:
+    name: Test bb
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: pwd
+      - run: echo "here is bb"

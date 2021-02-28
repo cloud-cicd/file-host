@@ -1,0 +1,14 @@
+name: aa
+on:
+  push:
+  star:
+  workflow_dispatch:
+
+jobs:
+  AA-build:
+    name: Test aa
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: pwd
+      - run: echo "here is aa"
