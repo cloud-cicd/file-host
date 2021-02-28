@@ -1,0 +1,21 @@
+name: cc
+on:
+  workflow_run:
+    workflows: ["bb"]
+    branches: [main]
+    types: 
+      - completed
+      - requested
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '* * * * 6'
+
+
+jobs:
+  CC-build:
+    name: Test cc
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: pwd
+      - run: echo "here is cc"

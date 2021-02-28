@@ -1,7 +1,10 @@
 name: bb
 on:
   push:
-  star:
+    branches:
+      - main
+  watch:
+    types: [started]
   workflow_dispatch:
 
 jobs:
@@ -12,3 +15,4 @@ jobs:
       - uses: actions/checkout@v2
       - run: pwd
       - run: echo "here is bb"
+      - run: sleep 10

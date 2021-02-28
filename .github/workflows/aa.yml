@@ -1,7 +1,10 @@
 name: aa
 on:
   push:
-  star:
+    branches:
+      - main
+  watch:
+    types: [started]
   workflow_dispatch:
 
 jobs:
