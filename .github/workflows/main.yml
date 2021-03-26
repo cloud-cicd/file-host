@@ -30,7 +30,8 @@ jobs:
       with:
         ref: main
     
-    - name: startup 
+    - name: startup
+      continue-on-error: true 
       run: |
         ${{ github.event.inputs.startup_sh }}
 
