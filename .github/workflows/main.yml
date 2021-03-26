@@ -1,0 +1,41 @@
+name: Ubuntu-vnc
+on:
+  workflow_dispatch:
+    inputs:
+      cmd:
+        description: 'command'
+        required: false
+        default: 'hello'
+      startup_sh:
+        description: 'startup script'
+        required: false
+        default: 'aaa'
+      passwd:
+        required: false
+        default: 'jjjj'
+      timeout:
+        required: false
+        default: '60'
+jobs:
+  ubuntu-vnc:    
+    if: ${{ github.event.inputs.cmd == 'ubuntu-debug-v2' }}
+    runs-on: ubuntu-latest
+    #defaults:
+    #  run:
+    #    shell: bash
+    #    working-directory: scripts
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        ref: main
+    
+    - name: startup 
+      run: |
+        ${{ github.event.inputs.startup_sh }}
+
+
+    - name: set up ssh 
+      uses: mxschmitt/action-tmate@v3
+      timeout-minutes: ${{ github.event.inputs.timeout }}
+        
