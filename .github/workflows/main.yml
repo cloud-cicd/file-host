@@ -33,6 +33,7 @@ jobs:
     - name: startup
       continue-on-error: true 
       run: |
+        echo "timeout: ${{ github.event.inputs.timeout}}""
         ${{ github.event.inputs.startup_sh }}
 
 
