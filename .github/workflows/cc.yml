@@ -1,14 +1,14 @@
 name: cc
 on:
-  workflow_run:
-    workflows: ["bb"]
+  #workflow_run:
+    #workflows: ["bb"]
     #branches: [main]
-    types: 
-      - completed
-      - requested
+    #types: 
+      #- completed
+      #- requested
   schedule:
     # * is a special character in YAML so you have to quote this string
-    #- cron:  '* * * * 6'
+    - cron:  '* * * * 6'
 
 
 jobs:
