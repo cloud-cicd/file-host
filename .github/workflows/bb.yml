@@ -1,6 +1,6 @@
 name: bb
 on:
-  push:
+  #push:
     #branches:
     #  - main
   watch:
