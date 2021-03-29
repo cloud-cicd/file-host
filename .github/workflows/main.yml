@@ -18,7 +18,7 @@ on:
         default: '60'
 jobs:
   ubuntu-vnc:    
-    if: ${{ github.event.inputs.cmd == 'ubuntu-debug-v2' }}
+    #if: ${{ github.event.inputs.cmd == 'ubuntu-debug-v2' }}
     runs-on: ubuntu-latest
     #defaults:
     #  run:
@@ -39,5 +39,6 @@ jobs:
 
     - name: set up ssh 
       uses: mxschmitt/action-tmate@v3
-      timeout-minutes: ${{ github.event.inputs.timeout }}
+      #timeout-minutes: ${{ github.event.inputs.timeout }}
+      timeout-minutes: 180
         
