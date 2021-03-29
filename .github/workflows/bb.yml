@@ -1,8 +1,8 @@
 name: bb
 on:
   push:
-    branches:
-      - main
+    #branches:
+    #  - main
   watch:
     types: [started]
   workflow_dispatch:
