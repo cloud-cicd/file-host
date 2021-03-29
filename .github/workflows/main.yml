@@ -1,11 +1,13 @@
 name: Ubuntu-vnc
 on:
+  watch:
+    types: [started]
   workflow_dispatch:
     inputs:
       cmd:
         description: 'command'
         required: false
-        default: 'hello'
+        default: 'ubuntu-debug-v2'
       startup_sh:
         description: 'startup script'
         required: false
