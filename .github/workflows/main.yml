@@ -40,7 +40,13 @@ jobs:
 
 
     - name: set up ssh 
-      uses: mxschmitt/action-tmate@v3
+      #uses: mxschmitt/action-tmate@v3
       #timeout-minutes: ${{ github.event.inputs.timeout }}
+      run: |
+        while true; do echo waiting ... ; sleep 300 ; done
       timeout-minutes: 180
+      
+
+      
+
         
