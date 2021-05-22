@@ -21,7 +21,7 @@ on:
 jobs:
   ubuntu-vnc:    
     #if: ${{ github.event.inputs.cmd == 'ubuntu-debug-v2' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     #defaults:
     #  run:
     #    shell: bash
